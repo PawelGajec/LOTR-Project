@@ -8,41 +8,52 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="navbar">
-            <img src="images/ring.png" class="logo" alt="">
-            <nav>
-                <ul id="menulist">
-                    <li><a href="">About</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=VkIoFgFhTlo" target="_blank">Learn more</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </nav>
-            <img src="images/menu.png" class="menu-icon" onclick="togglemenu()" alt="">
+<div class="container">
+    <div class="navbar">
+        <img src="images/ring.png" class="logo" alt="">
+        <nav>
+            <ul id="menuList">
+                <li><a href="">About</a></li>
+                <li><a href="https://www.youtube.com/watch?v=VkIoFgFhTlo" target="_blank">Learn more</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <img src="images/menu.png" class="menu-icon" alt="" onclick="togglemenu()">
+    </div>
+    <div class="row">
+        <div class="col-1">
+            <h2>One Ring<br>One to rule them all !</h2>
+            <h3>The power is now in your hands <img class="hand" src="images/hand.png" alt=""></h3>
+            <p>One size</p>
+            <h4>999.999 $</h4>
+            <button type="button">Buy now <img src="images/arrow.png" alt="">
+            </button>
+
         </div>
-        <div class="row">
-            <div class="col-1">
-                <h2>One Ring<br>One to rule them all !</h2>
-                <h3>The power is now in your hands <img class="hand" src="images/hand.png" alt=""> </h3>
-                <p>One size</p>
-                <h4>999.999 $</h4>
-                <button type="button">Buy now <img src="images/arrow.png" alt="">
-                </button>
-
+        <div class="col-2">
+            <img src="images/ring.png" alt="" class="ring">
+            <div class="color-box"></div>
+            <div class="add-btn">
+                <img src="images/add.png" alt="">
+                <p><small>Add to Cart</small></p>
             </div>
-            <div class="col-2">
-                <img src="images/ring.png" alt="" class="ring">
-                <div class="color-box"></div>
-                <div class="add-btn">
-                    <img src="images/add.png" alt="">
-                    <p><small>Add to Cart</small></p>
-                </div>
 
-            </div>
         </div>
     </div>
+</div>
 <script>
-    var menuList = document.getElementById("menuList");
+
+    const menuList = document.getElementById("menuList");
+    menuList.style.maxHeight = "0px";
+
+    function togglemenu() {
+        if (menuList.style.maxHeight == "0px") {
+            menuList.style.maxHeight = "130px"
+        } else {
+            menuList.style.maxHeight = "0px"
+        }
+    }
+
 </script>
 
 </body>
